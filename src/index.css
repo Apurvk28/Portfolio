@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
   --color-primary: #030412;
   --color-midnight: #06091f;

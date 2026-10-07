@@ -595,7 +595,7 @@ const FormDots = React.forwardRef(
           <div
             className={cn(
               "absolute inset-0 bg-repeat",
-              "text-neutral-400 dark:text-white/20",
+              "text-white/20",
             )}
             style={{
               backgroundImage:
@@ -627,7 +627,7 @@ export default function ContactWithGlobe({
     <section
       id={id}
       className={cn(
-        "relative w-full bg-zinc-50 dark:bg-zinc-950 overflow-hidden py-20",
+        "relative w-full bg-transparent overflow-hidden py-20",
         className,
       )}
     >
@@ -639,7 +639,7 @@ export default function ContactWithGlobe({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.15, ease: smoothEase }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-900 dark:text-white"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
           >
             {title}
           </motion.h2>
@@ -649,7 +649,7 @@ export default function ContactWithGlobe({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.3, ease: smoothEase }}
-            className="text-base text-zinc-500 dark:text-zinc-400 max-w-md"
+            className="text-base text-neutral-400 max-w-md"
           >
             {description}
           </motion.p>
@@ -664,10 +664,10 @@ export default function ContactWithGlobe({
             className="flex flex-col gap-6"
           >
             <div className="flex flex-col gap-1">
-              <h3 className="text-xl font-semibold text-zinc-900 dark:text-white">
+              <h3 className="text-xl font-semibold text-white">
                 Get in touch
               </h3>
-              <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-xs">
+              <p className="text-sm text-neutral-400 leading-relaxed max-w-xs">
                 Reach out via any channel below. We typically reply within one
                 business day.
               </p>
@@ -686,10 +686,10 @@ export default function ContactWithGlobe({
                     delay: 0.3 + i * 0.1,
                     ease: smoothEase,
                   }}
-                  className="group flex items-center gap-3 w-fit text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors duration-200"
+                  className="group flex items-center gap-3 w-fit text-sm text-neutral-400 hover:text-white transition-colors duration-200"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200 dark:border-zinc-700 group-hover:border-rose-300 dark:group-hover:border-rose-500/40 group-hover:bg-rose-50 dark:group-hover:bg-rose-500/10 flex items-center justify-center shrink-0 transition-all duration-200">
-                    <Icon className="w-3.5 h-3.5 text-zinc-400 dark:text-zinc-500 group-hover:text-rose-500 dark:group-hover:text-rose-400 transition-colors duration-200" />
+                  <div className="w-8 h-8 rounded-lg bg-zinc-800/80 border border-zinc-700 group-hover:border-rose-500/40 group-hover:bg-rose-500/10 flex items-center justify-center shrink-0 transition-all duration-200">
+                    <Icon className="w-3.5 h-3.5 text-zinc-400 group-hover:text-rose-400 transition-colors duration-200" />
                   </div>
                   {label}
                 </motion.a>
@@ -705,7 +705,7 @@ export default function ContactWithGlobe({
                 strokeWidth={0.6}
                 graticuleOpacity={0.12}
               />
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-zinc-50 dark:from-zinc-950 to-transparent" />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#030412] to-transparent" />
             </div>
           </motion.div>
 
@@ -717,10 +717,10 @@ export default function ContactWithGlobe({
             className="flex flex-col gap-6 items-center"
           >
             <div className="flex flex-col gap-1 text-center">
-              <h3 className="text-xl font-semibold text-zinc-900 dark:text-white">
+              <h3 className="text-xl font-semibold text-white">
                 Social Profiles
               </h3>
-              <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed max-w-xs">
+              <p className="text-sm text-neutral-400 leading-relaxed max-w-xs">
                 Hover over the card to reveal and connect across platforms.
               </p>
             </div>
