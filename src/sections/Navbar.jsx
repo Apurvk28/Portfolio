@@ -1,25 +1,41 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-function Navigation() {
+function Navigation({ onSelect }) {
   return (
     <ul className="nav-ul">
       <li className="nav-li">
-        <a className="text-lg hover:text-white transition-colors " href="#home">
+        <a
+          className="text-lg hover:text-white transition-colors"
+          href="#home"
+          onClick={onSelect}
+        >
           Home
         </a>
       </li>
       <li className="nav-li">
-        <a className="text-lg hover:text-white transition-colors " href="#about">
+        <a
+          className="text-lg hover:text-white transition-colors"
+          href="#about"
+          onClick={onSelect}
+        >
           About
         </a>
       </li>
       <li className="nav-li">
-        <a className="text-lg hover:text-white transition-colors " href="#work">
+        <a
+          className="text-lg hover:text-white transition-colors"
+          href="#work"
+          onClick={onSelect}
+        >
           Project
         </a>
       </li>
       <li className="nav-li">
-        <a className="text-lg hover:text-white transition-colors " href="#contact">
+        <a
+          className="text-lg hover:text-white transition-colors"
+          href="#contact"
+          onClick={onSelect}
+        >
           Contact
         </a>
       </li>
@@ -41,6 +57,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
+            aria-label="Toggle navigation"
           >
             <img
               src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
@@ -59,10 +76,10 @@ const Navbar = () => {
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
           style={{ maxHeight: "100vh" }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.3 }}
         >
           <nav className="pb-5">
-            <Navigation />
+            <Navigation onSelect={() => setIsOpen(false)} />
           </nav>
         </motion.div>
       )}
